@@ -1,0 +1,8 @@
+Level,Item Number,Category,Revision,Description,Lifecycle Phase,Has Attachments,Quantity,Manufacturer,Manufacturer Part Number,Distributor
+0,100-0001,Assembly,AB,Import Test,Production,,1,,,
+1,100-0002,Assembly,B,,Production,,10,,,
+2,,Assembly,1,Test Add Child,Prototype,,1,,,
+1,100-0003,Assembly,A,,Production,,1,,,
+1,100-0004,Assembly,A,,Production,,1,,,
+1,100-0005,Assembly,A,,Production,,1,,,
+1,100-0006,Assembly,A,,Production,,1,,,

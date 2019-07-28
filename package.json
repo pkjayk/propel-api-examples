@@ -1,0 +1,19 @@
+{
+  "name": "Propel_ImportAPI",
+  "version": "2.0",
+  "description": "Propel Import Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "jsforce": "*"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "node"
+  ],
+  "license": "MIT"
+}
