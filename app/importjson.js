@@ -33,15 +33,13 @@ var reformattedItems = [firstItem];
 // currently hardcoding category — can be input in file instead.
 for (i = 0; i < items.length; i++) {
   
-  let item = items[i];
+  let newItem = items[i];
 
-  let level = items[i].item.replace(/\./g,'');
+  let level = (items[i].item.match(/\./g) || []).length + 1;
 
   var thisItem = {};
 
-  // TODO: Level only converts if each level has < 10 items. If >10, need to check # of decimals and subtract from length
-
-  thisItem = {Level: level.length, Category: 'Part', 'Item Number': item['partNumber'] ? item['partNumber'] : null, Quantity: item['quantity']}
+  thisItem = {Level: level, Category: 'Part', 'Item Number': newItem['partNumber'] ? newItem['partNumber'] : null, Quantity: newItem['quantity']}
 
   reformattedItems.push(thisItem);
 
@@ -60,20 +58,8 @@ try {
   })
   .then( (resultRows) => {
     console.log("Propel Item and Revision imported: ", resultRows);
-    // the response is list of Apex.RowResult
-    // [{ warning: '',
-    //   success: true,
-    //   rowName: '20-00362:A*',
-    //   objName: 'Item Revision',
-    //   isInsert: false,
-    //   id: 'a0936000009c7OaAAI',
-    //   errors: [],
-    //   description: '' }]
   })
 
 .catch((e)=>{ console.log(e) });} catch (err) {
   console.error(err);
 }
-
-
-
