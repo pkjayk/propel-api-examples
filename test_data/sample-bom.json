@@ -1,0 +1,768 @@
+{
+  "bomTable" : {
+    "formatVersion" : "1.0",
+    "id" : "f030f6a4e15bac98c02c0dd6",
+    "name" : "BOM : Assembly 1",
+    "type" : "multiLevel",
+    "createdAt" : "2019-07-28T05:04:10.942Z",
+    "bomSource" : {
+      "document" : {
+        "id" : "7366f1cd89bc01dc7d3bd681",
+        "name" : "Fly Reel 2000"
+      },
+      "workspace" : {
+        "id" : "ce3157b7cc8eb775729b9018",
+        "name" : "Main"
+      },
+      "element" : {
+        "id" : "317f4a10ac477d3700054892",
+        "type" : "Assembly",
+        "name" : "fly reel",
+        "state" : "In progress"
+      }
+    },
+    "headers" : [ {
+      "name" : "Item No.",
+      "propertyName" : "item",
+      "visible" : true,
+      "propertyId" : "5ace8269c046ad612c65a0ba"
+    }, {
+      "name" : "Quantity",
+      "propertyName" : "quantity",
+      "visible" : true,
+      "propertyId" : "5ace84d3c046ad611c65a0dd"
+    }, {
+      "name" : "Name",
+      "propertyName" : "name",
+      "visible" : true,
+      "propertyId" : "57f3fb8efa3416c06701d60d"
+    }, {
+      "name" : "Part number",
+      "propertyName" : "partNumber",
+      "visible" : true,
+      "propertyId" : "57f3fb8efa3416c06701d60f"
+    }, {
+      "name" : "Revision",
+      "propertyName" : "revision",
+      "visible" : true,
+      "propertyId" : "57f3fb8efa3416c06701d610"
+    }, {
+      "name" : "Description",
+      "propertyName" : "description",
+      "visible" : true,
+      "propertyId" : "57f3fb8efa3416c06701d60e"
+    }, {
+      "name" : "Appearance",
+      "propertyName" : "appearance",
+      "visible" : true,
+      "propertyId" : "57f3fb8efa3416c06701d60c"
+    }, {
+      "name" : "State",
+      "propertyName" : "state",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d611"
+    }, {
+      "name" : "Vendor",
+      "propertyName" : "vendor",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d612"
+    }, {
+      "name" : "Project",
+      "propertyName" : "project",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d613"
+    }, {
+      "name" : "Product line",
+      "propertyName" : "productLine",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d614"
+    }, {
+      "name" : "Material",
+      "propertyName" : "material",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d615"
+    }, {
+      "name" : "Title 1",
+      "propertyName" : "title1",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d616"
+    }, {
+      "name" : "Title 2",
+      "propertyName" : "title2",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d617"
+    }, {
+      "name" : "Title 3",
+      "propertyName" : "title3",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d618"
+    }, {
+      "name" : "Not revision managed",
+      "propertyName" : "notRevisionManaged",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d61d"
+    }, {
+      "name" : "Exclude from BOM",
+      "propertyName" : "excludeFromBom",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d61e"
+    }, {
+      "name" : "Unit of measure",
+      "propertyName" : "57f3fb8efa3416c06701d623",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d623"
+    }, {
+      "name" : "Category",
+      "propertyName" : "category",
+      "visible" : false,
+      "propertyId" : "57f3fb8efa3416c06701d624"
+    }, {
+      "name" : "Tessellation quality",
+      "propertyName" : "5ace8269c046ad612c65a0bb",
+      "visible" : false,
+      "propertyId" : "5ace8269c046ad612c65a0bb"
+    }, {
+      "name" : "Lifecycle Phase",
+      "propertyName" : "lifecyclephase",
+      "visible" : false,
+      "propertyId" : "5cae4156085ce21397e9b0ed"
+    }, {
+      "name" : "Max Height",
+      "propertyName" : "maxheight",
+      "visible" : false,
+      "propertyId" : "5c0af8c1f9ae7913f72a4f4b"
+    }, {
+      "name" : "Max Width",
+      "propertyName" : "maxwidth",
+      "visible" : false,
+      "propertyId" : "5c0af8aef9ae7913f72a4c1f"
+    }, {
+      "name" : "Note",
+      "propertyName" : "note",
+      "visible" : false,
+      "propertyId" : "5c0af921f9ae7913f72a5d31"
+    }, {
+      "name" : "PLM Category",
+      "propertyName" : "plmcategory",
+      "visible" : false,
+      "propertyId" : "5cd9da5a037fe1133ca4d0d9"
+    }, {
+      "name" : "Sync Assembly with Propel?",
+      "propertyName" : "syncassemblywithpropel",
+      "visible" : false,
+      "propertyId" : "5ca6873d851e6514746e3a50"
+    }, {
+      "name" : "URL",
+      "propertyName" : "url",
+      "visible" : false,
+      "propertyId" : "5d08021413099a1692217cc5"
+    } ],
+    "items" : [ {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "c43ae3b3e956a9a41a4bc74e",
+        "partId" : "",
+        "configuration" : "a=0.3490658503988659+radian;d=0.08+meter;l=0.03+meter",
+        "isStandardContent" : false,
+        "indentLevel" : 0
+      },
+      "item" : "1",
+      "quantity" : 1.0,
+      "name" : "Cage Assembly",
+      "partNumber" : "",
+      "revision" : "",
+      "description" : "",
+      "appearance" : "N/A",
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : "N/A",
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "N/A",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : false,
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "2c56ef4e32f6cc1ad1a309ba",
+        "partId" : "RVBD",
+        "configuration" : "d=0.08+meter;l=0.03+meter",
+        "isStandardContent" : false,
+        "indentLevel" : 1
+      },
+      "item" : "1.1",
+      "quantity" : 1.0,
+      "name" : "cage",
+      "partNumber" : "900-00068",
+      "revision" : "A",
+      "description" : "",
+      "appearance" : {
+        "isGenerated" : false,
+        "color" : {
+          "red" : 157,
+          "green" : 207,
+          "blue" : 237
+        },
+        "opacity" : 255
+      },
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : {
+        "libraryName" : "Onshape Material Library",
+        "displayName" : "ABS",
+        "id" : "ABS",
+        "libraryReference" : {
+          "versionId" : "b27c14a71a61c0e11f9c4eb7",
+          "elementId" : "6bbab304a1f64e7d640a2d7d",
+          "documentId" : "2718281828459eacfeeda11f",
+          "elementMicroversionId" : "897d1250e37bbe6069d563b9"
+        },
+        "properties" : [ {
+          "type" : "REAL",
+          "units" : "kg/m^3",
+          "displayName" : "Density",
+          "description" : "Density",
+          "category" : "Physical",
+          "name" : "DENS",
+          "value" : "1052"
+        } ]
+      },
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "Auto",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : "N/A",
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "9807bc7f4321ef9759a9dbb1",
+        "partId" : "JaD",
+        "configuration" : "default",
+        "isStandardContent" : false,
+        "indentLevel" : 1
+      },
+      "item" : "1.2",
+      "quantity" : 3.0,
+      "name" : "roule",
+      "partNumber" : "",
+      "revision" : "",
+      "description" : "",
+      "appearance" : {
+        "isGenerated" : false,
+        "color" : {
+          "red" : 248,
+          "green" : 135,
+          "blue" : 1
+        },
+        "opacity" : 255
+      },
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : {
+        "libraryName" : "Onshape Material Library",
+        "displayName" : "ABS",
+        "id" : "ABS",
+        "libraryReference" : {
+          "versionId" : "b27c14a71a61c0e11f9c4eb7",
+          "elementId" : "6bbab304a1f64e7d640a2d7d",
+          "documentId" : "2718281828459eacfeeda11f",
+          "elementMicroversionId" : "897d1250e37bbe6069d563b9"
+        },
+        "properties" : [ {
+          "type" : "REAL",
+          "units" : "kg/m^3",
+          "displayName" : "Density",
+          "description" : "Density",
+          "category" : "Physical",
+          "name" : "DENS",
+          "value" : "1052"
+        } ]
+      },
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "Auto",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : "N/A",
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "008d675ae2ccade93ce74251",
+        "partId" : "",
+        "configuration" : "d=0.08+meter;l=0.03+meter",
+        "isStandardContent" : false,
+        "indentLevel" : 0
+      },
+      "item" : "2",
+      "quantity" : 1.0,
+      "name" : "fermeture",
+      "partNumber" : "",
+      "revision" : "A",
+      "description" : "",
+      "appearance" : "N/A",
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : "N/A",
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "N/A",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : false,
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "9807bc7f4321ef9759a9dbb1",
+        "partId" : "JaD",
+        "configuration" : "default",
+        "isStandardContent" : false,
+        "indentLevel" : 1
+      },
+      "item" : "2.1",
+      "quantity" : 3.0,
+      "name" : "roule",
+      "partNumber" : "",
+      "revision" : "",
+      "description" : "",
+      "appearance" : {
+        "isGenerated" : false,
+        "color" : {
+          "red" : 248,
+          "green" : 135,
+          "blue" : 1
+        },
+        "opacity" : 255
+      },
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : {
+        "libraryName" : "Onshape Material Library",
+        "displayName" : "ABS",
+        "id" : "ABS",
+        "libraryReference" : {
+          "versionId" : "b27c14a71a61c0e11f9c4eb7",
+          "elementId" : "6bbab304a1f64e7d640a2d7d",
+          "documentId" : "2718281828459eacfeeda11f",
+          "elementMicroversionId" : "897d1250e37bbe6069d563b9"
+        },
+        "properties" : [ {
+          "type" : "REAL",
+          "units" : "kg/m^3",
+          "displayName" : "Density",
+          "description" : "Density",
+          "category" : "Physical",
+          "name" : "DENS",
+          "value" : "1052"
+        } ]
+      },
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "Auto",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : "N/A",
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "9807bc7f4321ef9759a9dbb1",
+        "partId" : "JQD",
+        "configuration" : "l=0.03+meter",
+        "isStandardContent" : false,
+        "indentLevel" : 1
+      },
+      "item" : "2.2",
+      "quantity" : 1.0,
+      "name" : "fermeture",
+      "partNumber" : "",
+      "revision" : "A",
+      "description" : "",
+      "appearance" : {
+        "color" : {
+          "red" : null,
+          "green" : null,
+          "blue" : null
+        },
+        "opacity" : null,
+        "isGenerated" : null
+      },
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : {
+        "libraryName" : "Onshape Material Library",
+        "displayName" : "ABS",
+        "id" : "ABS",
+        "libraryReference" : {
+          "versionId" : "b27c14a71a61c0e11f9c4eb7",
+          "elementId" : "6bbab304a1f64e7d640a2d7d",
+          "documentId" : "2718281828459eacfeeda11f",
+          "elementMicroversionId" : "897d1250e37bbe6069d563b9"
+        },
+        "properties" : [ {
+          "type" : "REAL",
+          "units" : "kg/m^3",
+          "displayName" : "Density",
+          "description" : "Density",
+          "category" : "Physical",
+          "name" : "DENS",
+          "value" : "1052"
+        } ]
+      },
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "Auto",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : "N/A",
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "9560a50c7e7a0b5b7be86596",
+        "partId" : "JHD",
+        "configuration" : "default",
+        "isStandardContent" : false,
+        "indentLevel" : 1
+      },
+      "item" : "2.3",
+      "quantity" : 1.0,
+      "name" : "vis",
+      "partNumber" : "",
+      "revision" : "A",
+      "description" : "",
+      "appearance" : {
+        "isGenerated" : false,
+        "color" : {
+          "red" : 250,
+          "green" : 182,
+          "blue" : 1
+        },
+        "opacity" : 255
+      },
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : {
+        "libraryName" : "",
+        "displayName" : "",
+        "id" : "",
+        "properties" : [ ]
+      },
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "Auto",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : "N/A",
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "9560a50c7e7a0b5b7be86596",
+        "partId" : "JRD",
+        "configuration" : "l=0.02+meter",
+        "isStandardContent" : false,
+        "indentLevel" : 1
+      },
+      "item" : "2.4",
+      "quantity" : 1.0,
+      "name" : "tete vis",
+      "partNumber" : "",
+      "revision" : "A",
+      "description" : "",
+      "appearance" : {
+        "color" : {
+          "red" : null,
+          "green" : null,
+          "blue" : null
+        },
+        "opacity" : null,
+        "isGenerated" : null
+      },
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : {
+        "libraryName" : "",
+        "displayName" : "",
+        "id" : "",
+        "properties" : [ ]
+      },
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "Auto",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : "N/A",
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "05280058dcf9cacf91a979c2",
+        "partId" : "",
+        "configuration" : "essieu=0.003+meter",
+        "isStandardContent" : false,
+        "indentLevel" : 0
+      },
+      "item" : "3",
+      "quantity" : 1.0,
+      "name" : "bobine",
+      "partNumber" : "",
+      "revision" : "A",
+      "description" : "",
+      "appearance" : "N/A",
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : "N/A",
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "N/A",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : false,
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "bbb30aca710cfb8870d95c88",
+        "partId" : "R6BD",
+        "configuration" : "d=0.08+meter;l=0.03+meter",
+        "isStandardContent" : false,
+        "indentLevel" : 1
+      },
+      "item" : "3.1",
+      "quantity" : 1.0,
+      "name" : "bobine",
+      "partNumber" : "",
+      "revision" : "A",
+      "description" : "",
+      "appearance" : {
+        "isGenerated" : false,
+        "color" : {
+          "red" : 188,
+          "green" : 239,
+          "blue" : 234
+        },
+        "opacity" : 255
+      },
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : {
+        "libraryName" : "Onshape Material Library",
+        "displayName" : "ABS",
+        "id" : "ABS",
+        "libraryReference" : {
+          "versionId" : "b27c14a71a61c0e11f9c4eb7",
+          "elementId" : "6bbab304a1f64e7d640a2d7d",
+          "documentId" : "2718281828459eacfeeda11f",
+          "elementMicroversionId" : "897d1250e37bbe6069d563b9"
+        },
+        "properties" : [ {
+          "type" : "REAL",
+          "units" : "kg/m^3",
+          "displayName" : "Density",
+          "description" : "Density",
+          "category" : "Physical",
+          "name" : "DENS",
+          "value" : "1052"
+        } ]
+      },
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "Auto",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : "N/A",
+      "url" : ""
+    }, {
+      "itemSource" : {
+        "documentId" : "7366f1cd89bc01dc7d3bd681",
+        "wvmType" : "w",
+        "wvmId" : "ce3157b7cc8eb775729b9018",
+        "elementId" : "bbb30aca710cfb8870d95c88",
+        "partId" : "RNCD",
+        "configuration" : "d=0.08+meter",
+        "isStandardContent" : false,
+        "indentLevel" : 1
+      },
+      "item" : "3.2",
+      "quantity" : 1.0,
+      "name" : "manivelle",
+      "partNumber" : "",
+      "revision" : "A",
+      "description" : "",
+      "appearance" : {
+        "isGenerated" : false,
+        "color" : {
+          "red" : 250,
+          "green" : 203,
+          "blue" : 67
+        },
+        "opacity" : 255
+      },
+      "state" : "In progress",
+      "vendor" : "",
+      "project" : "",
+      "productLine" : "",
+      "material" : {
+        "libraryName" : "Onshape Material Library",
+        "displayName" : "ABS",
+        "id" : "ABS",
+        "libraryReference" : {
+          "versionId" : "b27c14a71a61c0e11f9c4eb7",
+          "elementId" : "6bbab304a1f64e7d640a2d7d",
+          "documentId" : "2718281828459eacfeeda11f",
+          "elementMicroversionId" : "897d1250e37bbe6069d563b9"
+        },
+        "properties" : [ {
+          "type" : "REAL",
+          "units" : "kg/m^3",
+          "displayName" : "Density",
+          "description" : "Density",
+          "category" : "Physical",
+          "name" : "DENS",
+          "value" : "1052"
+        } ]
+      },
+      "title1" : "",
+      "title2" : "",
+      "title3" : "",
+      "notRevisionManaged" : false,
+      "excludeFromBom" : false,
+      "57f3fb8efa3416c06701d623" : "Each",
+      "category" : "N/A",
+      "5ace8269c046ad612c65a0bb" : "Auto",
+      "lifecyclephase" : "",
+      "maxheight" : "",
+      "maxwidth" : "",
+      "note" : "",
+      "plmcategory" : "",
+      "syncassemblywithpropel" : "N/A",
+      "url" : ""
+    } ]
+  }
+}

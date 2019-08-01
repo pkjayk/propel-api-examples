@@ -7,7 +7,8 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "jsforce": "*"
+    "jsforce": "*",
+    "json2csv": "^4.5.2"
   },
   "engines": {
     "node": "*"
