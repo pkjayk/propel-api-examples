@@ -1,0 +1,553 @@
+{
+  "properties": [
+    {
+      "name": "Exclude from BOM",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d61e",
+      "valueType": "BOOL",
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": "false",
+      "validator": null,
+      "uiHints": null,
+      "propertySource": 0,
+      "value": false
+    },
+    {
+      "name": "Not revision managed",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d61d",
+      "valueType": "BOOL",
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": "false",
+      "validator": null,
+      "uiHints": null,
+      "propertySource": 0,
+      "value": false
+    },
+    {
+      "name": "Title 1",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d616",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": 10000,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Project",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d613",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": 10000,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Note",
+      "schemaId": "5c0af8aed1c0201579509a71",
+      "propertyId": "5c0af921f9ae7913f72a5d31",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": null,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Lifecycle Phase",
+      "schemaId": "5c8af08db8b8d810ed19b5ed",
+      "propertyId": "5cae4156085ce21397e9b0ed",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": null,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Product line",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d614",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": 10000,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "State",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d611",
+      "valueType": "ENUM",
+      "enumValues": [
+        {
+          "label": "In progress",
+          "value": "0"
+        },
+        {
+          "label": "Pending",
+          "value": "1"
+        },
+        {
+          "label": "Released",
+          "value": "2"
+        },
+        {
+          "label": "Obsolete",
+          "value": "3"
+        },
+        {
+          "label": "Rejected",
+          "value": "4"
+        },
+        {
+          "label": "Discarded",
+          "value": "5"
+        }
+      ],
+      "editable": false,
+      "required": true,
+      "defaultValue": "0",
+      "validator": null,
+      "uiHints": null,
+      "propertySource": 0,
+      "value": "0"
+    },
+    {
+      "name": "Vendor",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d612",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": 10000,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Revision",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d610",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": 10000,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "PLM Category",
+      "schemaId": "5c8af08db8b8d810ed19b5ed",
+      "propertyId": "5cd9da5a037fe1133ca4d0d9",
+      "valueType": "ENUM",
+      "enumValues": [
+        {
+          "value": "Top-Level Assembly"
+        },
+        {
+          "value": "Subassembly"
+        },
+        {
+          "value": "Motor"
+        },
+        {
+          "value": "Optical Assembly"
+        },
+        {
+          "value": "Assembly"
+        },
+        {
+          "value": "Documents"
+        },
+        {
+          "value": "Fabricated Part"
+        },
+        {
+          "value": "Mechanical"
+        },
+        {
+          "value": "Packaging"
+        },
+        {
+          "value": "Specification"
+        },
+        {
+          "value": "Chassis"
+        },
+        {
+          "value": "SKU - Top Level Assy"
+        },
+        {
+          "value": "Hardware"
+        },
+        {
+          "value": "Drawing"
+        },
+        {
+          "value": "Connector"
+        },
+        {
+          "value": "Inductor"
+        },
+        {
+          "value": "IC"
+        },
+        {
+          "value": "Crystal"
+        },
+        {
+          "value": "Part"
+        },
+        {
+          "value": "Assemblies"
+        },
+        {
+          "value": "Parts - Mechanical"
+        },
+        {
+          "value": "Parts - Other"
+        },
+        {
+          "value": "Package"
+        },
+        {
+          "value": "Leadframe"
+        },
+        {
+          "value": "Mask"
+        },
+        {
+          "value": "Substrate"
+        },
+        {
+          "value": "IP Block"
+        },
+        {
+          "value": "Label"
+        }
+      ],
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "validator": null,
+      "uiHints": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Title 2",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d617",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": 10000,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Title 3",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d618",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": 10000,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Name",
+      "schemaId": "5877a03ebe4c21163b49dce0",
+      "propertyId": "57f3fb8efa3416c06701d60d",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": 1,
+        "maxLength": 256,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": true,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": "Assembly 1"
+    },
+    {
+      "name": "Description",
+      "schemaId": "5877a03ebe4c21163b49dce0",
+      "propertyId": "57f3fb8efa3416c06701d60e",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": true
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": 10000,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Sync Assembly with Propel?",
+      "schemaId": "5c8af08db8b8d810ed19b5ed",
+      "propertyId": "5ca6873d851e6514746e3a50",
+      "valueType": "BOOL",
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": "false",
+      "validator": null,
+      "uiHints": null,
+      "propertySource": 0,
+      "value": false
+    },
+    {
+      "name": "URL",
+      "schemaId": "5c8af08db8b8d810ed19b5ed",
+      "propertyId": "5d08021413099a1692217cc5",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": null,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Max Width",
+      "schemaId": "5c0af8aed1c0201579509a71",
+      "propertyId": "5c0af8aef9ae7913f72a4c1f",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": null,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Part number",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d60f",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": 50,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Max Height",
+      "schemaId": "5c0af8aed1c0201579509a71",
+      "propertyId": "5c0af8c1f9ae7913f72a4f4b",
+      "valueType": "STRING",
+      "uiHints": {
+        "multiline": false
+      },
+      "validator": {
+        "minLength": null,
+        "maxLength": null,
+        "pattern": null
+      },
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": null,
+      "propertySource": 0,
+      "value": null
+    },
+    {
+      "name": "Unit of measure",
+      "schemaId": "5877a03ebe4c21163b49dce3",
+      "propertyId": "57f3fb8efa3416c06701d623",
+      "valueType": "ENUM",
+      "enumValues": [
+        {
+          "value": "Centimeter"
+        },
+        {
+          "value": "Foot"
+        },
+        {
+          "value": "Inch"
+        },
+        {
+          "value": "Meter"
+        },
+        {
+          "value": "Millimeter"
+        },
+        {
+          "value": "Yard"
+        },
+        {
+          "value": "Gram"
+        },
+        {
+          "value": "Kilogram"
+        },
+        {
+          "value": "Ounce"
+        },
+        {
+          "value": "Pound"
+        },
+        {
+          "value": "Liter"
+        },
+        {
+          "value": "Gallon"
+        },
+        {
+          "value": "Each"
+        },
+        {
+          "value": "Fluid ounce"
+        },
+        {
+          "value": "Milliliter"
+        },
+        {
+          "value": "Centiliter"
+        }
+      ],
+      "editable": true,
+      "editableInUi": true,
+      "required": false,
+      "defaultValue": "Each",
+      "validator": null,
+      "uiHints": null,
+      "propertySource": 0,
+      "value": "Each"
+    }
+  ],
+  "href": "https://cad.onshape.com/api/metadata/d/cdfc3ca5a87dd74691a10eaa/w/1351f8a9b7da2d411fa65a3a/e/340591082518dd0af04bc7c0?configuration=default",
+  "elementType": 1,
+  "elementId": "340591082518dd0af04bc7c0",
+  "mimeType": "onshape/assembly"
+}
