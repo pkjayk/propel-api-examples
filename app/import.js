@@ -1,20 +1,21 @@
 // Propel Import API
 // load items from JSON file into propel using API
 
-  const config = require('../config') // username and password stored here
-  // ./config.js
-  // module.exports = {
-  //   username : 'jayson@username.dev',
-  //   password : 'yourpass_and_token', //must include password+token
-  //   loginUrl : 'https://login.salesforce.com'
-  // };
+const config = require('../config') // username and password stored here
+// ./config.js
+// module.exports = {
+//   username : 'jayson@username.dev',
+//   password : 'yourpass_and_token', //must include password+token
+//   loginUrl : 'https://login.salesforce.com'
+// };
 
-  const fs = require('fs')
-  const jsforce = require('jsforce')        // https://www.npmjs.com/package/jsforce  and see docs: https://jsforce.github.io/
-  const { parse } = require('json2csv')
-  const conn = new jsforce.Connection({ loginUrl : config.loginUrl})
-  let namespace = config.namespace || 'PDLM';
-  let data = require('../test_data/sample-bom-large.json')
+const fs = require('fs')
+const jsforce = require('jsforce')        // https://www.npmjs.com/package/jsforce  and see docs: https://jsforce.github.io/
+const { parse } = require('json2csv')
+const conn = new jsforce.Connection({ loginUrl : config.loginUrl})
+let namespace = config.namespace || 'PDLM';
+let dataFile = require('../test_data/sample-bom-large.json')
+let fieldMapping = require('../test_data/field-mapping.json')
 
 //
 // the file try.csv contains a valid CSV import file for your org
@@ -26,40 +27,35 @@ class Import {
 
   constructor(req, res) {
 
-    this.data = data
+    this.data = dataFile
+    this.fields = fieldMapping
 
-    this.start()
+    this.importData()
   }
 
-  start(){
+  importData(){
 
-    let dataFile = this.data
+    let items = this.data.bomTable.items;
 
-    let items = dataFile.bomTable.items;
-
-    // todo, make call to grab top-level assembly
+    // TODO: make call to grab top-level assembly
     var firstItem = {Level: 0, Category: 'Assembly', 'Item Number': null, Quantity: '1'}
     var reformattedItems = [firstItem];
 
     // iterate through BOM and grab relevant fields.
-    // TODO: Create mapping for fields to import
-    // currently hardcoding category — can be input in file instead.
-    for (i = 0; i < items.length; i++) {
+    for (var i = 0; i < items.length; i++) {
       
       let newItem = items[i];
 
-      let level = (items[i].item.match(/\./g) || []).length + 1;
-
       var thisItem = {};
 
-      thisItem = {Level: level, Category: 'Part', 'Item Number': newItem['partNumber'] ? newItem['partNumber'] : null, Quantity: newItem['quantity']}
+      thisItem = this.constructRow(this.fields, newItem, 'Part')
 
       reformattedItems.push(thisItem);
 
     }
 
-    const fields = ['Level','Category','Item Number','Quantity'];
-    const opts = { fields };
+    const columns = Object.values(this.fields);
+    const opts = { columns };
      
     try {
       const csv = parse(reformattedItems, opts);
@@ -67,16 +63,43 @@ class Import {
 
       conn.login(config.username, config.password)
       .then( () => {
-        return conn.apex.post('/services/apexrest/'+namespace+'/api/v2/import?isReplacingBOM=true', base64data);
+        // TODO: Import URL as an attachment
+        return conn.apex.post('/services/apexrest/'+namespace+'/api/v2/import?hasATT=true&isReplacingBOM=true', base64data);
       })
       .then( (resultRows) => {
-        console.log("Propel Item and Revision imported: ", resultRows);
+        console.log("Propel Item and Revision imported: ", resultRows)
       })
 
     .catch((e)=>{ console.log(e) });} catch (err) {
       console.error(err);
     }
   }
+
+  // TODO: https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_sobject_insert_update_blob.htm
+  // Upload all documents and then do a file attachment import
+  uploadDocuments() {
+
+  }
+
+  /*
+   * @param {object} map             | Field mapping of JSON Field Name: 
+   * @param {object} data            | import data
+   * @param {string} defaultCategory | fallback category to prevent import failure if category is missing
+  */
+  constructRow(map, data, defaultCategory = '') {
+    var formattedRow = {}
+
+    for(let key in map){
+      // allow for a default category
+      if(map[key] == 'Category' && (data[key] == 'N/A' || data[key] == null)){
+        formattedRow[map[key]] = defaultCategory
+      } else {
+        formattedRow[map[key]] = data[key] ? data[key] : null
+      }
+    }
+    return formattedRow
+  }
+
 }
 
 module.exports = Import

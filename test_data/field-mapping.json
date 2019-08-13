@@ -1,0 +1,7 @@
+{ 
+	"item": "Level", 
+	"category": "Category", 
+	"partNumber": "Item Number", 
+	"description": "Description",
+	"quantity": "Quantity"
+}

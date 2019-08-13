@@ -4,7 +4,8 @@
   "description": "Propel Import Test",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "live": "nodemon server.js" 
   },
   "dependencies": {
     "express": "^4.17.1",
