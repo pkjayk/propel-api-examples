@@ -61,10 +61,13 @@ class Import {
       const csv = parse(reformattedItems, opts);
       const base64data = new Buffer(csv).toString('base64');
 
+      console.log(reformattedItems)
+      console.log(csv)
+
       conn.login(config.username, config.password)
       .then( () => {
         // TODO: Import URL as an attachment
-        return conn.apex.post('/services/apexrest/'+namespace+'/api/v2/import?hasATT=true&isReplacingBOM=true', base64data);
+        //return conn.apex.post('/services/apexrest/'+namespace+'/api/v2/import?hasATT=true&isReplacingBOM=true', base64data);
       })
       .then( (resultRows) => {
         console.log("Propel Item and Revision imported: ", resultRows)
@@ -90,13 +93,29 @@ class Import {
     var formattedRow = {}
 
     for(let key in map){
-      // allow for a default category
-      if(map[key] == 'Category' && (data[key] == 'N/A' || data[key] == null)){
+
+      /*if(typeof map[key] === 'object' && map[key] !== null) {
+        for(let nestedKey in map) {
+          console.log(nestedKey)
+          formattedRow[map[key]] = data[key][nestedKey] ? data[key][nestedKey] : null
+        }
+      }*/
+      if(map[key] == 'Category' && (data[key] == 'N/A' || data[key] == null)) {       // allow for a default category
         formattedRow[map[key]] = defaultCategory
       } else {
         formattedRow[map[key]] = data[key] ? data[key] : null
       }
     }
+
+    // hard code Onshape params for now
+    formattedRow['Doc ID'] = data['itemSource']['documentId']
+    formattedRow['WVM Type'] = data['itemSource']['wvmType']
+    formattedRow['WVM ID'] = data['itemSource']['wvmId']
+    formattedRow['Ele ID'] = data['itemSource']['elementId']  
+  
+    formattedRow['File Name'] = 'test 1234' // TOOD: Fix issue where need to create item first before creating attachments
+    formattedRow['URL'] = 'http://www.google.com'
+
     return formattedRow
   }
 
