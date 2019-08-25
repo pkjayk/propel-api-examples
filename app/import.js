@@ -13,6 +13,7 @@ const fs = require('fs')
 const jsforce = require('jsforce')        // https://www.npmjs.com/package/jsforce  and see docs: https://jsforce.github.io/
 const { parse } = require('json2csv')
 const conn = new jsforce.Connection({ loginUrl : config.loginUrl})
+const DocumentUpload = require('./DocumentUpload')
 let namespace = config.namespace || 'PDLM';
 let dataFile = require('../test_data/sample-bom-large.json')
 let fieldMapping = require('../test_data/field-mapping.json')
@@ -30,58 +31,67 @@ class Import {
     this.data = dataFile
     this.fields = fieldMapping
 
-    this.importData()
   }
 
-  importData(){
-
-    let items = this.data.bomTable.items;
-
-    // TODO: make call to grab top-level assembly
-    var firstItem = {Level: 0, Category: 'Assembly', 'Item Number': null, Quantity: '1'}
-    var reformattedItems = [firstItem];
-
-    // iterate through BOM and grab relevant fields.
-    for (var i = 0; i < items.length; i++) {
-      
-      let newItem = items[i];
-
-      var thisItem = {};
-
-      thisItem = this.constructRow(this.fields, newItem, 'Part')
-
-      reformattedItems.push(thisItem);
-
-    }
-
-    const columns = Object.values(this.fields);
-    const opts = { columns };
-     
-    try {
-      const csv = parse(reformattedItems, opts);
-      const base64data = new Buffer(csv).toString('base64');
-
-      console.log(reformattedItems)
-      console.log(csv)
-
-      conn.login(config.username, config.password)
-      .then( () => {
-        // TODO: Import URL as an attachment
-        //return conn.apex.post('/services/apexrest/'+namespace+'/api/v2/import?hasATT=true&isReplacingBOM=true', base64data);
-      })
-      .then( (resultRows) => {
-        console.log("Propel Item and Revision imported: ", resultRows)
-      })
-
-    .catch((e)=>{ console.log(e) });} catch (err) {
-      console.error(err);
-    }
+  async authenticateSf() {
+    return new Promise(async (resolve, reject) => {
+      try {
+        await conn.login(config.username, config.password)
+        .then( () => {
+          resolve(conn)
+        })
+      .catch((e)=>{ console.log(e) });} catch (err) {
+        console.error(err);
+        reject(error)
+      }
+    })
   }
 
-  // TODO: https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_sobject_insert_update_blob.htm
-  // Upload all documents and then do a file attachment import
-  uploadDocuments() {
+  async importData(){
+    return new Promise(async (resolve, reject) => {
 
+      //first Authenticate into SF
+      const auth = await this.authenticateSf()
+
+      let items = this.data.bomTable.items;
+
+      // TODO: make call to grab top-level assembly
+      var firstItem = {Level: 0, Category: 'Assembly', 'Item Number': null, Quantity: '1'}
+      var reformattedItems = [firstItem];
+
+      // iterate through BOM and grab relevant fields to construct import file
+      for (var i = 0; i < items.length; i++) {
+        
+        let newItem = items[i];
+
+        var thisItem = {};
+
+        thisItem = this.buildRow(this.fields, newItem, 'Part')
+
+        reformattedItems.push(thisItem);
+
+      }
+
+      const columns = Object.values(this.fields);
+      const opts = { columns };
+       
+      try {
+        const csv = parse(reformattedItems, opts);
+        const base64data = new Buffer(csv).toString('base64');
+
+        auth.apex.post('/services/apexrest/'+namespace+'/api/v2/import?hasATT=true&isReplacingBOM=true', base64data)
+        .then( (resultRows) => {
+          if(resultRows) {
+            resolve(this.buildResponse(resultRows))
+          } else {
+            resolve('Error importing data')
+          }
+        })
+      .catch((e)=>{ console.log(e) });} catch (err) {
+        console.error(err);
+        reject('login failed')
+      }
+    })
   }
 
   /*
@@ -89,7 +99,7 @@ class Import {
    * @param {object} data            | import data
    * @param {string} defaultCategory | fallback category to prevent import failure if category is missing
   */
-  constructRow(map, data, defaultCategory = '') {
+  buildRow(map, data, defaultCategory = '') {
     var formattedRow = {}
 
     for(let key in map){
@@ -117,6 +127,18 @@ class Import {
     formattedRow['URL'] = 'http://www.google.com'
 
     return formattedRow
+  }
+
+  /*
+    Returns a response for API
+  */
+  buildResponse(results) {
+    var resultWrapper = {}
+    resultWrapper.statusCode = complete
+    resultWrapper.totalResults = results.length
+    resultWrapper.results = results 
+
+    return resultWrapper;
   }
 
 }
